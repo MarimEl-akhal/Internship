@@ -1,0 +1,46 @@
+### Get all cars
+GET http://localhost:8080/cars
+Accept: application/json
+
+
+### Get car By id
+GET http://localhost:8080/cars/25
+Accept: application/json
+
+### Post add new car
+POST http://localhost:8080/cars
+Content-Type: application/json
+Accept: application/json
+
+{
+  "thumbnail": "some-image.jpeg",
+  "makeId": 3,
+  "modelId":25,
+  "make": {
+    "id": 3,
+    "nameAr": "بي ام دابيو",
+    "nameEn": "BMW"
+  },
+  "model": {
+    "id": 25,
+    "nameAr": "Custom Model",
+    "nameEn": "Custom Model"
+  },
+  "year": 2025,
+  "price": 123456,
+  "carStatus": 6
+}
+
+### Delete data by id
+DELETE http://localhost:8080/cars/25
+Accept: application/json
+
+###Get by filter using madel name
+GET http://localhost:8080/cars/filterByModel?model=G 63
+Accept: application/json
+
+###Get by filter
+GET http://localhost:8080/cars/filterByMake?make=bmw
+Accept: application/json
+
+
